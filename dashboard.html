@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ÉquiMarché — Mon Espace</title>
+  <meta name="description" content="Gérez vos annonces, messages et favoris sur ÉquiMarché.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashSidebar">
+      <div class="dash-logo">
+        <a href="index.html" class="nav-logo">ÉquiMarché</a>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#mes-annonces" class="dash-nav-item active" id="nav-annonces">
+          <span class="material-icons">dashboard</span>
+          <span>Mes annonces</span>
+        </a>
+        <a href="#messages" class="dash-nav-item" id="nav-messages">
+          <span class="material-icons">mail</span>
+          <span>Messages</span>
+          <span class="badge">3</span>
+        </a>
+        <a href="#favoris" class="dash-nav-item" id="nav-favoris">
+          <span class="material-icons">favorite</span>
+          <span>Favoris</span>
+        </a>
+        <a href="#profil" class="dash-nav-item" id="nav-profil">
+          <span class="material-icons">person</span>
+          <span>Profil</span>
+        </a>
+        <a href="#parametres" class="dash-nav-item" id="nav-parametres">
+          <span class="material-icons">settings</span>
+          <span>Paramètres</span>
+        </a>
+      </nav>
+
+      <div class="dash-sidebar-bottom">
+        <div class="elite-promo">
+          <span class="material-icons elite-icon">workspace_premium</span>
+          <div>
+            <strong>Devenir Membre Elite</strong>
+            <p>Accédez aux ventes privées et aux services de conciergerie.</p>
+          </div>
+          <a href="#" class="btn-secondary elite-btn">Découvrir</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main" id="dashMain">
+
+      <!-- TOP BAR -->
+      <header class="dash-topbar">
+        <div class="dash-welcome">
+          <h1 class="dash-greeting">Bienvenue, <em>Monsieur de La Roche</em></h1>
+          <p class="dash-subtitle">Voici l'état actuel de votre écurie numérique.</p>
+        </div>
+        <div class="dash-topbar-actions">
+          <a href="creer-annonce.html" class="btn-primary">
+            <span class="material-icons">add</span> Nouvelle annonce
+          </a>
+          <button class="dash-avatar" id="dashAvatarBtn">LR</button>
+        </div>
+      </header>
+
+      <!-- STATS CARDS -->
+      <section class="dash-stats" id="mes-annonces">
+        <div class="stat-card">
+          <div class="stat-card__icon"><span class="material-icons">visibility</span></div>
+          <div class="stat-card__body">
+            <span class="stat-card__num">1 247</span>
+            <span class="stat-card__label">Vues ce mois</span>
+          </div>
+          <div class="stat-card__trend positive">
+            <span class="material-icons">trending_up</span> +12%
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon"><span class="material-icons">directions_run</span></div>
+          <div class="stat-card__body">
+            <span class="stat-card__num">8</span>
+            <span class="stat-card__label">Demandes d'essais</span>
+          </div>
+          <div class="stat-card__trend positive">
+            <span class="material-icons">trending_up</span> +3
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon"><span class="material-icons">person_search</span></div>
+          <div class="stat-card__body">
+            <span class="stat-card__num">34</span>
+            <span class="stat-card__label">Clients potentiels</span>
+          </div>
+          <div class="stat-card__trend neutral">
+            <span class="material-icons">remove</span> Stable
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon"><span class="material-icons">favorite</span></div>
+          <div class="stat-card__body">
+            <span class="stat-card__num">56</span>
+            <span class="stat-card__label">Mis en favoris</span>
+          </div>
+          <div class="stat-card__trend positive">
+            <span class="material-icons">trending_up</span> +8%
+          </div>
+        </div>
+      </section>
+
+      <!-- MY LISTINGS -->
+      <section class="dash-section">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Mes Annonces</h2>
+          <a href="creer-annonce.html" class="btn-ghost">+ Ajouter</a>
+        </div>
+        <div class="listings-table">
+          <div class="listings-table-header">
+            <span>Cheval</span>
+            <span>Statut</span>
+            <span>Vues</span>
+            <span>Demandes</span>
+            <span>Actions</span>
+          </div>
+
+          <div class="listing-row">
+            <div class="listing-row__horse">
+              <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=80&auto=format&fit=crop&q=80" alt="Caspian Blue" class="listing-row__img">
+              <div>
+                <strong>Caspian Blue</strong>
+                <span>Selle Français · 7 ans · 15 500 €</span>
+              </div>
+            </div>
+            <span class="status-pill status-pill--active">Actif</span>
+            <span class="listing-row__data">847</span>
+            <span class="listing-row__data">5</span>
+            <div class="listing-row__actions">
+              <a href="cheval-detail.html" class="btn-icon-sm" title="Voir"><span class="material-icons">visibility</span></a>
+              <button class="btn-icon-sm" title="Modifier"><span class="material-icons">edit</span></button>
+              <button class="btn-icon-sm btn-icon-danger" title="Supprimer"><span class="material-icons">delete</span></button>
+            </div>
+          </div>
+
+          <div class="listing-row">
+            <div class="listing-row__horse">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=80&auto=format&fit=crop&q=80" alt="Silver Sovereign" class="listing-row__img">
+              <div>
+                <strong>Silver Sovereign</strong>
+                <span>KWPN · 6 ans · 28 000 €</span>
+              </div>
+            </div>
+            <span class="status-pill status-pill--pending">En attente</span>
+            <span class="listing-row__data">312</span>
+            <span class="listing-row__data">2</span>
+            <div class="listing-row__actions">
+              <a href="cheval-detail.html" class="btn-icon-sm" title="Voir"><span class="material-icons">visibility</span></a>
+              <button class="btn-icon-sm" title="Modifier"><span class="material-icons">edit</span></button>
+              <button class="btn-icon-sm btn-icon-danger" title="Supprimer"><span class="material-icons">delete</span></button>
+            </div>
+          </div>
+
+          <div class="listing-row">
+            <div class="listing-row__horse">
+              <img src="https://images.unsplash.com/photo-1481656023948-ce1d0e9c5857?w=80&auto=format&fit=crop&q=80" alt="Belle du Lac" class="listing-row__img">
+              <div>
+                <strong>Belle du Lac</strong>
+                <span>Lusitanien · 9 ans · 12 000 €</span>
+              </div>
+            </div>
+            <span class="status-pill status-pill--sold">Vendue</span>
+            <span class="listing-row__data">1 204</span>
+            <span class="listing-row__data">11</span>
+            <div class="listing-row__actions">
+              <a href="cheval-detail.html" class="btn-icon-sm" title="Voir"><span class="material-icons">visibility</span></a>
+              <button class="btn-icon-sm" title="Dupliquer"><span class="material-icons">content_copy</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITY FEED -->
+      <section class="dash-section" id="messages">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Activité Récente</h2>
+          <a href="#" class="btn-ghost">Tout voir</a>
+        </div>
+        <div class="activity-feed">
+
+          <div class="activity-item activity-item--message">
+            <div class="activity-icon"><span class="material-icons">mail</span></div>
+            <div class="activity-body">
+              <p class="activity-title">Nouveau message</p>
+              <p class="activity-quote">&ldquo;Bonjour, Caspian Blue est-il disponible pour un essai mercredi prochain ?&rdquo;</p>
+              <span class="activity-time">Il y a 2h · Antoine M.</span>
+            </div>
+            <a href="#" class="btn-ghost btn-sm">Répondre</a>
+          </div>
+
+          <div class="activity-item activity-item--favorite">
+            <div class="activity-icon"><span class="material-icons">favorite</span></div>
+            <div class="activity-body">
+              <p class="activity-title">Mise en favoris</p>
+              <p class="activity-quote">Un utilisateur a ajouté <strong>Silver Sovereign</strong> à ses favoris.</p>
+              <span class="activity-time">Il y a 4h</span>
+            </div>
+          </div>
+
+          <div class="activity-item activity-item--view">
+            <div class="activity-icon"><span class="material-icons">person</span></div>
+            <div class="activity-body">
+              <p class="activity-title">Profil consulté</p>
+              <p class="activity-quote">Votre profil d'éleveur a été consulté <strong>12 fois</strong> aujourd'hui.</p>
+              <span class="activity-time">Aujourd'hui</span>
+            </div>
+          </div>
+
+          <div class="activity-item activity-item--message">
+            <div class="activity-icon"><span class="material-icons">mail</span></div>
+            <div class="activity-body">
+              <p class="activity-title">Nouveau message</p>
+              <p class="activity-quote">&ldquo;Pouvez-vous m'envoyer le dossier vétérinaire complet de Silver Sovereign ?&rdquo;</p>
+              <span class="activity-time">Hier · Claire D.</span>
+            </div>
+            <a href="#" class="btn-ghost btn-sm">Répondre</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section class="dash-section" id="favoris">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Mes Favoris</h2>
+          <a href="catalogue.html" class="btn-ghost">Parcourir le catalogue</a>
+        </div>
+        <div class="fav-grid">
+          <div class="fav-card">
+            <img src="https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=300&auto=format&fit=crop&q=80" alt="Noble Dancer" class="fav-card__img">
+            <div class="fav-card__body">
+              <strong>Noble Dancer</strong>
+              <span>Hanovrien · 6 ans</span>
+              <span class="fav-price">24 000 €</span>
+              <a href="cheval-detail.html" class="btn-card">Voir</a>
+            </div>
+          </div>
+          <div class="fav-card">
+            <img src="https://images.unsplash.com/photo-1643737773219-dcb9b6d3cde2?w=300&auto=format&fit=crop&q=80" alt="Ksar d'Or" class="fav-card__img">
+            <div class="fav-card__body">
+              <strong>Ksar d'Or</strong>
+              <span>Arabe · 5 ans</span>
+              <span class="fav-price">9 500 €</span>
+              <a href="cheval-detail.html" class="btn-card">Voir</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER MINIMAL -->
+  <footer class="footer footer--minimal">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 ÉquiMarché. L'Excellence Équestre.</span>
+        <div class="footer-links-inline">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Heritage</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Dashboard nav smooth scroll
+    document.querySelectorAll('.dash-nav-item').forEach(item => {
+      item.addEventListener('click', function() {
+        document.querySelectorAll('.dash-nav-item').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

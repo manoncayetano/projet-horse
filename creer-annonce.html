@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer une Annonce | The Equestrian Editorial — ÉquiMarché</title>
+  <meta name="description" content="Vendez votre cheval d'exception sur ÉquiMarché. Présentez votre monture dans un écrin digital digne de sa lignée.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">ÉquiMarché</a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="catalogue.html">Listings</a></li>
+        <li><a href="#">Inquiries</a></li>
+        <li><a href="#">Analytics</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn-nav">Mon Espace</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="form-page-hero">
+    <div class="container">
+      <div class="form-hero-content">
+        <span class="section-tag">The Equestrian Editorial</span>
+        <h1 class="form-hero-title">Vendre un Cheval<br><em>d'Exception</em></h1>
+        <p class="form-hero-subtitle">Présentez votre monture dans un écrin digital digne de sa lignée. Chaque détail compte pour trouver le partenaire idéal.</p>
+      </div>
+      <div class="form-progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="progress-dot"></div>
+          <span>Informations</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <div class="progress-dot"></div>
+          <span>Description</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <div class="progress-dot"></div>
+          <span>Médias</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <div class="progress-dot"></div>
+          <span>Expérience</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="5">
+          <div class="progress-dot"></div>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM BODY -->
+  <div class="form-page-body">
+    <div class="container form-layout">
+
+      <!-- MAIN FORM -->
+      <form class="listing-form" id="listingForm" onsubmit="return false;">
+
+        <!-- STEP 1: Informations de Base -->
+        <div class="form-step active" id="step-1">
+          <div class="form-section-header">
+            <span class="form-step-number">01</span>
+            <div>
+              <h2 class="form-section-title">Informations de Base</h2>
+              <p class="form-section-desc">L'identité et les caractéristiques fondamentales de votre cheval.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label class="form-label" for="horse-name">Nom du cheval <span class="required">*</span></label>
+              <input type="text" id="horse-name" class="form-input" placeholder="Ex: Caspian Blue" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-race">Race <span class="required">*</span></label>
+              <select id="horse-race" class="form-input form-select" required>
+                <option value="">Sélectionner une race</option>
+                <option>Selle Français</option>
+                <option>Pur-Sang</option>
+                <option>KWPN</option>
+                <option>Arabe</option>
+                <option>Hanovrien</option>
+                <option>Lusitanien</option>
+                <option>Oldenbourg</option>
+                <option>Welsh Cob</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-age">Âge <span class="required">*</span></label>
+              <input type="number" id="horse-age" class="form-input" placeholder="Ex: 7" min="1" max="35" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-gender">Sexe <span class="required">*</span></label>
+              <select id="horse-gender" class="form-input form-select" required>
+                <option value="">Sélectionner</option>
+                <option>Jument</option>
+                <option>Hongre</option>
+                <option>Étalon</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-height">Taille (cm) <span class="required">*</span></label>
+              <input type="number" id="horse-height" class="form-input" placeholder="Ex: 168" min="100" max="200" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-color">Robe</label>
+              <select id="horse-color" class="form-input form-select">
+                <option value="">Sélectionner une robe</option>
+                <option>Bai</option>
+                <option>Alezan</option>
+                <option>Gris</option>
+                <option>Noir</option>
+                <option>Isabeille</option>
+                <option>Rouan</option>
+                <option>Pie</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-discipline">Discipline principale <span class="required">*</span></label>
+              <select id="horse-discipline" class="form-input form-select" required>
+                <option value="">Sélectionner</option>
+                <option>CSO / Hunter</option>
+                <option>Dressage</option>
+                <option>Endurance</option>
+                <option>Loisir / Balade</option>
+                <option>Attelage</option>
+                <option>Polo</option>
+                <option>Complet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="horse-price">Prix (€) <span class="required">*</span></label>
+              <input type="number" id="horse-price" class="form-input" placeholder="Ex: 15000" min="0" required>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="horse-location">Localisation <span class="required">*</span></label>
+              <input type="text" id="horse-location" class="form-input" placeholder="Ex: Fontainebleau (77)" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Description -->
+        <div class="form-step" id="step-2">
+          <div class="form-section-header">
+            <span class="form-step-number">02</span>
+            <div>
+              <h2 class="form-section-title">Description</h2>
+              <p class="form-section-desc">Partagez l'histoire, le tempérament et les aptitudes de votre compagnon.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label class="form-label" for="horse-desc">Description principale <span class="required">*</span></label>
+              <textarea id="horse-desc" class="form-textarea" rows="6" placeholder="Décrivez le caractère, les aptitudes, l'histoire de votre cheval..." required></textarea>
+              <span class="form-hint">Minimum 100 caractères. Soyez précis et authentique.</span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="horse-curator-note">Note du curateur (optionnel)</label>
+              <textarea id="horse-curator-note" class="form-textarea" rows="3" placeholder="Un résumé éditorial de 1-2 phrases pour mettre en valeur les atouts majeurs..."></textarea>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label">Atouts principaux</label>
+              <div class="tag-input-wrap" id="tagInputWrap">
+                <span class="tag-chip">Excellent mental<button type="button" onclick="removeTag(this)">×</button></span>
+                <span class="tag-chip">Respectueux de la barre<button type="button" onclick="removeTag(this)">×</button></span>
+                <input type="text" class="tag-input-field" id="tagField" placeholder="Ajouter un atout..." onkeydown="addTag(event)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Médias -->
+        <div class="form-step" id="step-3">
+          <div class="form-section-header">
+            <span class="form-step-number">03</span>
+            <div>
+              <h2 class="form-section-title">Médias &amp; Dossier</h2>
+              <p class="form-section-desc">L'aspect visuel et sanitaire est primordial pour instaurer la confiance.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label class="form-label">Photos <span class="required">*</span></label>
+              <div class="upload-zone" id="photoUploadZone" onclick="document.getElementById('photoInput').click()">
+                <span class="material-icons upload-icon">add_photo_alternate</span>
+                <p class="upload-text">Cliquez ou glissez vos photos ici</p>
+                <p class="upload-hint">JPG, PNG — max 10 Mo par image — 8 photos minimum recommandées</p>
+                <input type="file" id="photoInput" accept="image/*" multiple hidden onchange="handlePhotoUpload(this)">
+              </div>
+              <div class="upload-preview" id="photoPreview"></div>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label">Vidéo (optionnel)</label>
+              <div class="upload-zone upload-zone--sm" onclick="document.getElementById('videoInput').click()">
+                <span class="material-icons upload-icon">videocam</span>
+                <p class="upload-text">Ajouter une vidéo</p>
+                <p class="upload-hint">MP4, MOV — max 200 Mo</p>
+                <input type="file" id="videoInput" accept="video/*" hidden>
+              </div>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label">Carnet de santé &amp; Radiographies</label>
+              <div class="upload-zone upload-zone--sm" onclick="document.getElementById('vetInput').click()">
+                <span class="material-icons upload-icon">description</span>
+                <p class="upload-text">Importer le dossier vétérinaire</p>
+                <p class="upload-hint">Format PDF uniquement</p>
+                <input type="file" id="vetInput" accept=".pdf" hidden>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Expérience -->
+        <div class="form-step" id="step-4">
+          <div class="form-section-header">
+            <span class="form-step-number">04</span>
+            <div>
+              <h2 class="form-section-title">Expérience</h2>
+              <p class="form-section-desc">Parcours sportif et résultats officiels.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="exp-level">Niveau actuel</label>
+              <select id="exp-level" class="form-input form-select">
+                <option value="">Sélectionner</option>
+                <option>Club / Loisir</option>
+                <option>Amateur</option>
+                <option>Amateur Elite</option>
+                <option>Pro / Grand Prix</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="exp-years">Années de compétition</label>
+              <input type="number" id="exp-years" class="form-input" placeholder="Ex: 3" min="0" max="20">
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label">Palmarès &amp; résultats notables</label>
+              <div class="results-list" id="resultsList">
+                <div class="result-row">
+                  <input type="text" class="form-input" placeholder="Date (ex: Juin 2023)">
+                  <input type="text" class="form-input" placeholder="Épreuve (ex: Grand Prix 130 — CSIYH1*)">
+                  <button type="button" class="btn-icon-remove" onclick="removeResultRow(this)"><span class="material-icons">close</span></button>
+                </div>
+              </div>
+              <button type="button" class="btn-ghost btn-add-row" id="addResultBtn" onclick="addResultRow()">
+                <span class="material-icons">add</span> Ajouter un résultat
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5: Contact -->
+        <div class="form-step" id="step-5">
+          <div class="form-section-header">
+            <span class="form-step-number">05</span>
+            <div>
+              <h2 class="form-section-title">Préférences Contact</h2>
+              <p class="form-section-desc">Comment souhaitez-vous être contacté par les acheteurs potentiels ?</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label class="form-label">Mode de contact préféré</label>
+              <div class="contact-prefs">
+                <label class="pref-option">
+                  <input type="checkbox" checked> <span class="material-icons">mail</span> Email
+                </label>
+                <label class="pref-option">
+                  <input type="checkbox"> <span class="material-icons">phone</span> Téléphone
+                </label>
+                <label class="pref-option">
+                  <input type="checkbox"> <span class="material-icons">chat</span> Messagerie ÉquiMarché
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">Téléphone (optionnel)</label>
+              <input type="tel" id="contact-phone" class="form-input" placeholder="+33 6 XX XX XX XX">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email-vendor">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email-vendor" class="form-input" placeholder="votre@email.com" required>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="contact-hours">Disponibilités pour les essais</label>
+              <input type="text" id="contact-hours" class="form-input" placeholder="Ex: Du lundi au vendredi, 9h-18h">
+            </div>
+
+            <div class="form-group form-group--full">
+              <div class="terms-check">
+                <input type="checkbox" id="terms-accept" required>
+                <label for="terms-accept">J'accepte les <a href="#">Conditions Générales</a> et la <a href="#">Politique de Confidentialité</a> d'ÉquiMarché.</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM NAVIGATION -->
+        <div class="form-nav">
+          <button type="button" class="btn-ghost" id="prevBtn" onclick="changeStep(-1)" style="display:none;">← Précédent</button>
+          <button type="button" class="btn-primary" id="nextBtn" onclick="changeStep(1)">Suivant →</button>
+          <button type="submit" class="btn-primary" id="submitBtn" style="display:none;" onclick="submitListing()">
+            <span class="material-icons">check_circle</span> Publier l'annonce
+          </button>
+        </div>
+
+      </form>
+
+      <!-- SIDEBAR TIPS -->
+      <aside class="form-tips-sidebar">
+        <div class="tips-card">
+          <span class="material-icons tips-icon">tips_and_updates</span>
+          <h3>Conseils du Curateur</h3>
+          <ul class="tips-list">
+            <li>Des photos de qualité professionnelle augmentent les demandes de 70%.</li>
+            <li>Un dossier vétérinaire complet rassure immédiatement les acheteurs sérieux.</li>
+            <li>Soyez précis sur le niveau et le parcours ; les acheteurs apprécient l'honnêteté.</li>
+            <li>Indiquez les disponibilités pour les essais afin d'accélérer les prises de contact.</li>
+          </ul>
+        </div>
+
+        <div class="tips-card tips-card--dark">
+          <span class="material-icons tips-icon">verified</span>
+          <h3>Annonce vérifiée</h3>
+          <p>Votre annonce sera relue par notre équipe de curateurs sous 24h avant publication.</p>
+        </div>
+
+        <div class="tips-card">
+          <span class="material-icons tips-icon">support_agent</span>
+          <h3>Besoin d'aide ?</h3>
+          <p>Notre équipe est disponible pour vous accompagner dans la création de votre annonce.</p>
+          <a href="#" class="btn-secondary" style="margin-top:1rem;display:inline-block;">Contacter l'agent</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal" style="display:none;">
+    <div class="modal">
+      <span class="material-icons modal-icon">check_circle</span>
+      <h2>Annonce soumise avec succès !</h2>
+      <p>Notre équipe de curateurs va examiner votre annonce sous 24h. Vous recevrez un email de confirmation.</p>
+      <a href="dashboard.html" class="btn-primary">Voir mon tableau de bord</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 The Equestrian Editorial. All rights reserved.</span>
+        <div class="footer-links-inline">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Support</a>
+          <a href="#">Contact Agent</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function changeStep(dir) {
+      const steps = document.querySelectorAll('.form-step');
+      const progressSteps = document.querySelectorAll('.progress-step');
+      steps[currentStep - 1].classList.remove('active');
+      progressSteps[currentStep - 1].classList.remove('active');
+      currentStep += dir;
+      if (currentStep < 1) currentStep = 1;
+      if (currentStep > totalSteps) currentStep = totalSteps;
+      steps[currentStep - 1].classList.add('active');
+      progressSteps[currentStep - 1].classList.add('active');
+      document.getElementById('prevBtn').style.display = currentStep === 1 ? 'none' : 'inline-flex';
+      document.getElementById('nextBtn').style.display = currentStep === totalSteps ? 'none' : 'inline-flex';
+      document.getElementById('submitBtn').style.display = currentStep === totalSteps ? 'inline-flex' : 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitListing() {
+      document.getElementById('successModal').style.display = 'flex';
+    }
+
+    function addResultRow() {
+      const list = document.getElementById('resultsList');
+      const row = document.createElement('div');
+      row.className = 'result-row';
+      row.innerHTML = `
+        <input type="text" class="form-input" placeholder="Date (ex: Juin 2023)">
+        <input type="text" class="form-input" placeholder="Épreuve">
+        <button type="button" class="btn-icon-remove" onclick="removeResultRow(this)"><span class="material-icons">close</span></button>
+      `;
+      list.appendChild(row);
+    }
+
+    function removeResultRow(btn) {
+      btn.closest('.result-row').remove();
+    }
+
+    function removeTag(btn) {
+      btn.closest('.tag-chip').remove();
+    }
+
+    function addTag(event) {
+      if (event.key === 'Enter' || event.key === ',') {
+        event.preventDefault();
+        const field = document.getElementById('tagField');
+        const val = field.value.trim();
+        if (!val) return;
+        const chip = document.createElement('span');
+        chip.className = 'tag-chip';
+        chip.innerHTML = `${val}<button type="button" onclick="removeTag(this)">×</button>`;
+        document.getElementById('tagInputWrap').insertBefore(chip, field);
+        field.value = '';
+      }
+    }
+
+    function handlePhotoUpload(input) {
+      const preview = document.getElementById('photoPreview');
+      preview.innerHTML = '';
+      Array.from(input.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.className = 'preview-thumb';
+          preview.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // Drag and drop
+    const zone = document.getElementById('photoUploadZone');
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
+    zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+    zone.addEventListener('drop', e => {
+      e.preventDefault();
+      zone.classList.remove('dragover');
+      document.getElementById('photoInput').files = e.dataTransfer.files;
+      handlePhotoUpload(document.getElementById('photoInput'));
+    });
+
+    document.getElementById('successModal').addEventListener('click', function(e) {
+      if (e.target === this) this.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

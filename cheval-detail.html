@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caspian Blue — ÉquiMarché | The Digital Curator</title>
+  <meta name="description" content="Caspian Blue – Selle Français, 7 ans, 1.68m. Hongre bai, disciplines CSO/Hunter. Écuries du Val d'Or. 15 500 €.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">ÉquiMarché</a>
+      <ul class="nav-links">
+        <li><a href="catalogue.html">Horses</a></li>
+        <li><a href="#">Stables</a></li>
+        <li><a href="#">Pedigree</a></li>
+        <li><a href="#">Editorial</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn-nav">Mon Espace</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="material-icons">chevron_right</span>
+        <a href="catalogue.html">Catalogue</a>
+        <span class="material-icons">chevron_right</span>
+        <span>Caspian Blue</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HORSE DETAIL -->
+  <div class="detail-layout">
+    <div class="container detail-container">
+
+      <!-- LEFT: Gallery -->
+      <div class="detail-gallery">
+        <div class="gallery-main">
+          <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&auto=format&fit=crop&q=85" alt="Caspian Blue - vue principale" class="gallery-main-img" id="mainGalleryImg">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=200&auto=format&fit=crop&q=80" alt="" class="gallery-thumb active" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&auto=format&fit=crop&q=85')">
+          <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65ca?w=200&auto=format&fit=crop&q=80" alt="" class="gallery-thumb" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1598974357801-cbca100e65ca?w=900&auto=format&fit=crop&q=85')">
+          <img src="https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=200&auto=format&fit=crop&q=80" alt="" class="gallery-thumb" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=900&auto=format&fit=crop&q=85')">
+          <img src="https://images.unsplash.com/photo-1481656023948-ce1d0e9c5857?w=200&auto=format&fit=crop&q=80" alt="" class="gallery-thumb" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1481656023948-ce1d0e9c5857?w=900&auto=format&fit=crop&q=85')">
+        </div>
+      </div>
+
+      <!-- RIGHT: Details -->
+      <div class="detail-info">
+        <div class="detail-tag-row">
+          <span class="detail-tag">Selle Français</span>
+          <span class="detail-tag">CSO / Hunter</span>
+          <button class="btn-favorite" id="favoriteBtn" title="Ajouter aux favoris">
+            <span class="material-icons">favorite_border</span>
+          </button>
+        </div>
+
+        <h1 class="detail-horse-name">Caspian Blue</h1>
+        <p class="detail-price">15 500 €</p>
+        <p class="detail-location"><span class="material-icons">place</span> Écuries du Val d'Or · Fontainebleau (77)</p>
+
+        <div class="detail-specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Race</span>
+            <span class="spec-value">Selle Français</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Âge</span>
+            <span class="spec-value">7 ans</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Taille</span>
+            <span class="spec-value">1.68 m</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Sexe</span>
+            <span class="spec-value">Hongre</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Robe</span>
+            <span class="spec-value">Bai</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Discipline</span>
+            <span class="spec-value">CSO / Hunter</span>
+          </div>
+        </div>
+
+        <div class="detail-cta-block">
+          <a href="#contact-form" class="btn-primary btn-lg">Contacter le vendeur</a>
+          <a href="#" class="btn-secondary btn-lg">Planifier un essai</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESCRIPTION SECTION -->
+  <section class="detail-section">
+    <div class="container detail-body">
+
+      <div class="detail-main-content">
+
+        <div class="curator-quote">
+          <span class="curator-icon">✦</span>
+          <blockquote>
+            &ldquo;Un partenaire d'exception alliant puissance et sérénité, idéal pour un cavalier souhaitant performer en Amateur Elite ou entamer le circuit Pro.&rdquo;
+          </blockquote>
+          <cite>— Description du Curateur</cite>
+        </div>
+
+        <div class="detail-block">
+          <p>Caspian Blue est un sujet d'une grande distinction, doté d'un équilibre naturel remarquable et d'un excellent passage de dos. Sous la selle, il se montre volontaire, réactif et très respectueux de la barre. Son éducation a été menée avec patience et rigueur, respectant sa croissance physique.</p>
+          <p>En compétition, Caspian fait preuve d'un mental d'acier. Il ne regarde rien et cherche toujours la solution pour son cavalier. Son galop ample et cadencé lui permet d'aborder les combinaisons avec une facilité déconcertante.</p>
+        </div>
+
+        <!-- COMPETITION HISTORY -->
+        <div class="detail-block">
+          <h2 class="detail-block-title">Historique Compétition</h2>
+          <div class="competition-list">
+            <div class="competition-item">
+              <span class="comp-date">Juin 2023</span>
+              <span class="comp-event">Grand Prix 130 — CSIYH1*</span>
+            </div>
+            <div class="competition-item">
+              <span class="comp-date">Avril 2023</span>
+              <span class="comp-event">Cycle Classique 6 ans</span>
+            </div>
+            <div class="competition-item">
+              <span class="comp-date">Mars 2023</span>
+              <span class="comp-event">Warm-up Deauville</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VETERINARY RECORD -->
+        <div class="detail-block">
+          <h2 class="detail-block-title">Dossier Vétérinaire</h2>
+          <div class="vet-cards">
+            <div class="vet-card">
+              <span class="vet-icon"><span class="material-icons">health_and_safety</span></span>
+              <div>
+                <strong>Check-up Complet</strong>
+                <p>Effectué en Janvier 2024. Bilan radiologique (18 clichés) disponible sur demande. Aucun signe de pathologie.</p>
+              </div>
+            </div>
+            <div class="vet-card">
+              <span class="vet-icon"><span class="material-icons">vaccines</span></span>
+              <div>
+                <strong>Vaccinations</strong>
+                <p>À jour : Grippe, Tétanos, Rhinopneumonie (dernière injection : Mars 2024).</p>
+              </div>
+            </div>
+            <div class="vet-card">
+              <span class="vet-icon"><span class="material-icons">self_improvement</span></span>
+              <div>
+                <strong>Ostéopathie &amp; Dentiste</strong>
+                <p>Suivi régulier. Dernière visite ostéopathe : Février 2024.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="detail-block">
+          <h2 class="detail-block-title">Localisation</h2>
+          <div class="location-block">
+            <span class="material-icons location-pin">place</span>
+            <div>
+              <span class="location-name">Fontainebleau (77)</span>
+              <span class="location-note">À 1h de Paris</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="detail-block" id="contact-form">
+          <h2 class="detail-block-title">Contacter le vendeur</h2>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nom complet</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Votre nom">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="votre@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">Message</label>
+              <textarea id="contact-msg" class="form-textarea" rows="4" placeholder="Bonjour, je suis intéressé(e) par Caspian Blue..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Envoyer le message</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- SIMILAR HORSES SIDEBAR -->
+      <aside class="detail-sidebar">
+        <h2 class="detail-block-title">Chevaux similaires</h2>
+        <a href="catalogue.html" class="section-link" style="display:block;margin-bottom:1.5rem;">Voir tout le catalogue →</a>
+        <div class="similar-list">
+          <div class="similar-card">
+            <img src="https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=200&auto=format&fit=crop&q=80" alt="Diva du Lys" class="similar-img">
+            <div class="similar-info">
+              <strong>Diva du Lys</strong>
+              <span>Selle Français · 8 ans · Alezan</span>
+              <span class="similar-price">18 200 €</span>
+            </div>
+          </div>
+          <div class="similar-card">
+            <img src="https://images.unsplash.com/photo-1556731834-d28ba6d95c78?w=200&auto=format&fit=crop&q=80" alt="Silver Moon" class="similar-img">
+            <div class="similar-info">
+              <strong>Silver Moon</strong>
+              <span>KWPN · 6 ans · Gris</span>
+              <span class="similar-price">25 500 €</span>
+            </div>
+          </div>
+          <div class="similar-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&auto=format&fit=crop&q=80" alt="Midnight Eclipse" class="similar-img">
+            <div class="similar-info">
+              <strong>Midnight Eclipse</strong>
+              <span>Oldenbourg · 9 ans · Noir</span>
+              <span class="similar-price">33 000 €</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 ÉquiMarché. The Digital Curator. All Rights Reserved.</span>
+        <div class="footer-links-inline">
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Concierge</a>
+          <a href="#">Global Shipping</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function changeMainImage(thumb, src) {
+      document.getElementById('mainGalleryImg').src = src;
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    }
+    document.getElementById('favoriteBtn').addEventListener('click', function() {
+      const icon = this.querySelector('.material-icons');
+      if (icon.textContent === 'favorite_border') {
+        icon.textContent = 'favorite';
+        icon.style.color = 'var(--secondary)';
+      } else {
+        icon.textContent = 'favorite_border';
+        icon.style.color = '';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉquiMarché | The Equestrian Editorial — Catalogue</title>
+  <meta name="description" content="92 chevaux d'exception disponibles. Filtrez par race, âge, discipline et budget.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">ÉquiMarché</a>
+      <ul class="nav-links">
+        <li><a href="catalogue.html" class="active">Acheter</a></li>
+        <li><a href="creer-annonce.html">Vendre</a></li>
+        <li><a href="#">Races</a></li>
+        <li><a href="#">Conseils</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn-nav">Mon Espace</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CATALOGUE HEADER -->
+  <section class="catalogue-header">
+    <div class="container">
+      <span class="section-tag">The Equestrian Editorial</span>
+      <h1 class="catalogue-title">ÉquiMarché</h1>
+      <p class="catalogue-subtitle">92 curated results available for acquisition</p>
+    </div>
+  </section>
+
+  <!-- CATALOGUE LAYOUT -->
+  <div class="catalogue-layout">
+
+    <!-- FILTERS SIDEBAR -->
+    <aside class="filter-sidebar" id="filterSidebar">
+      <div class="filter-header">
+        <h2 class="filter-title">Filter Curator</h2>
+        <p class="filter-desc">Refine your selection</p>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Recherche</label>
+        <input type="text" placeholder="Nom du cheval..." class="filter-input" id="search-input">
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Race</label>
+        <select class="filter-select" id="filter-race">
+          <option value="">Toutes les races</option>
+          <option>Selle Français</option>
+          <option>Pur-Sang</option>
+          <option>KWPN</option>
+          <option>Arabe</option>
+          <option>Hanovrien</option>
+          <option>Lusitanien</option>
+          <option>Welsh Cob</option>
+          <option>Oldenbourg</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Discipline</label>
+        <div class="filter-checkboxes">
+          <label class="filter-check"><input type="checkbox"> CSO / Hunter</label>
+          <label class="filter-check"><input type="checkbox"> Dressage</label>
+          <label class="filter-check"><input type="checkbox"> Endurance</label>
+          <label class="filter-check"><input type="checkbox"> Loisir</label>
+          <label class="filter-check"><input type="checkbox"> Polo</label>
+          <label class="filter-check"><input type="checkbox"> Attelage</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Âge (années)</label>
+        <div class="range-inputs">
+          <input type="number" placeholder="Min" class="filter-input range" min="1" max="30" id="age-min">
+          <span>—</span>
+          <input type="number" placeholder="Max" class="filter-input range" min="1" max="30" id="age-max">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Budget (€)</label>
+        <div class="range-inputs">
+          <input type="number" placeholder="Min" class="filter-input range" id="price-min">
+          <span>—</span>
+          <input type="number" placeholder="Max" class="filter-input range" id="price-max">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Sexe</label>
+        <div class="filter-checkboxes">
+          <label class="filter-check"><input type="checkbox"> Jument</label>
+          <label class="filter-check"><input type="checkbox"> Hongre</label>
+          <label class="filter-check"><input type="checkbox"> Étalon</label>
+        </div>
+      </div>
+
+      <button class="btn-primary filter-btn" id="apply-filters">Appliquer les filtres</button>
+      <button class="btn-ghost filter-btn" id="reset-filters">Réinitialiser</button>
+    </aside>
+
+    <!-- HORSES GRID -->
+    <main class="catalogue-main">
+      <div class="catalogue-toolbar">
+        <span class="result-count">92 chevaux disponibles</span>
+        <div class="sort-wrap">
+          <label class="filter-label" for="sort-select">Trier par</label>
+          <select class="filter-select" id="sort-select">
+            <option>Plus récents</option>
+            <option>Prix croissant</option>
+            <option>Prix décroissant</option>
+            <option>Âge croissant</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="catalogue-grid">
+
+        <article class="horse-card" data-href="cheval-detail.html">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=500&auto=format&fit=crop&q=80" alt="Caspian Blue" class="horse-card__img">
+            <span class="horse-card__badge">Coup de cœur</span>
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Selle Français</span><span class="dot">·</span><span>6 ans</span><span class="dot">·</span><span>168 cm</span></div>
+            <h3 class="horse-card__name">Caspian Blue</h3>
+            <p class="horse-card__price">15 500 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65ca?w=500&auto=format&fit=crop&q=80" alt="Noble Dancer" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Pur-Sang</span><span class="dot">·</span><span>5 ans</span><span class="dot">·</span><span>165 cm</span></div>
+            <h3 class="horse-card__name">Noble Dancer</h3>
+            <p class="horse-card__price">22 000 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=500&auto=format&fit=crop&q=80" alt="Midnight Sun" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>KWPN</span><span class="dot">·</span><span>7 ans</span><span class="dot">·</span><span>172 cm</span></div>
+            <h3 class="horse-card__name">Midnight Sun</h3>
+            <p class="horse-card__price">31 000 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop&q=80" alt="Aramis d'Or" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Arabe</span><span class="dot">·</span><span>4 ans</span><span class="dot">·</span><span>158 cm</span></div>
+            <h3 class="horse-card__name">Aramis d'Or</h3>
+            <p class="horse-card__price">8 900 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1643737773219-dcb9b6d3cde2?w=500&auto=format&fit=crop&q=80" alt="Vitesse" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Selle Français</span><span class="dot">·</span><span>9 ans</span><span class="dot">·</span><span>169 cm</span></div>
+            <h3 class="horse-card__name">Vitesse</h3>
+            <p class="horse-card__price">14 200 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1481656023948-ce1d0e9c5857?w=500&auto=format&fit=crop&q=80" alt="Silver Spirit" class="horse-card__img">
+            <span class="horse-card__badge horse-card__badge--sold">Vendu</span>
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Welsh Cob</span><span class="dot">·</span><span>5 ans</span><span class="dot">·</span><span>152 cm</span></div>
+            <h3 class="horse-card__name">Silver Spirit</h3>
+            <p class="horse-card__price">6 500 €</p>
+            <a href="cheval-detail.html" class="btn-card btn-card--disabled">Vendu</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1556731834-d28ba6d95c78?w=500&auto=format&fit=crop&q=80" alt="Baron Rouge" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Pur-Sang</span><span class="dot">·</span><span>6 ans</span><span class="dot">·</span><span>166 cm</span></div>
+            <h3 class="horse-card__name">Baron Rouge</h3>
+            <p class="horse-card__price">19 800 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65ca?w=500&auto=format&fit=crop&q=80" alt="Lumina" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>KWPN</span><span class="dot">·</span><span>8 ans</span><span class="dot">·</span><span>170 cm</span></div>
+            <h3 class="horse-card__name">Lumina</h3>
+            <p class="horse-card__price">27 500 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+        <article class="horse-card">
+          <div class="horse-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1534773728-71b859d8a21f?w=500&auto=format&fit=crop&q=80" alt="Rusty Autumn" class="horse-card__img">
+          </div>
+          <div class="horse-card__body">
+            <div class="horse-card__meta"><span>Selle Français</span><span class="dot">·</span><span>5 ans</span><span class="dot">·</span><span>164 cm</span></div>
+            <h3 class="horse-card__name">Rusty Autumn</h3>
+            <p class="horse-card__price">11 000 €</p>
+            <a href="cheval-detail.html" class="btn-card">Voir l'annonce</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button class="page-btn page-btn--active" id="page-1">1</button>
+        <button class="page-btn" id="page-2">2</button>
+        <button class="page-btn" id="page-3">3</button>
+        <span class="page-ellipsis">…</span>
+        <button class="page-btn" id="page-10">10</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">ÉquiMarché</a>
+          <p>La plateforme de référence pour les chevaux d'exception.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liens</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Consignment</a></li>
+            <li><a href="#">Contact Curator</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 ÉquiMarché. The Equestrian Editorial.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
